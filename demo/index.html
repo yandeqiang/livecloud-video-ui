@@ -1,0 +1,57 @@
+<html>
+  <head>
+    <title>demo</title>
+  </head>
+  <body>
+    <div id="wrapper"></div>
+    <script src="../lib/index.browser.js"></script>
+    <script>
+      generateVideo({
+        wrapper: '#wrapper',
+        src: 'http://yunxianchang.live.ujne7.com/vod-system-bj/103_371ab0c0fda-143d-4755-8727-d3cd12dce02d.mp4',
+        plugin: [{
+          name: 'chimeeControl',
+          children: {
+            play: {
+              icon: {
+                play: 'https://s2.ssl.qhres.com/static/ca0a34daa0275c66.svg',
+                pause: 'https://s2.ssl.qhres.com/static/bf1283c19f936f54.svg'
+              },
+              width: '29px',
+              height: '29px'
+            },
+            progressTime: true,
+            progressBar: {
+              layout: 'two-line'
+            },
+            volume: {
+              icon: {
+                high: 'https://s3.ssl.qhres.com/static/eca3a0478c8eb724.svg',
+                low: 'https://s3.ssl.qhres.com/static/efdfe9fd8e4c58f5.svg',
+                mute: 'https://s1.ssl.qhres.com/static/b7194bc37e99b04a.svg'
+              },
+              width: '29px',
+              height: '26px'
+            },          
+            clarity: {
+              list: [
+                {name: '标清', src: 'http://yunxianchang.live.ujne7.com/vod-system-bj/103_368b70a5d4f-c5cc-42ff-b442-004168fc86a3.mp4'},
+                {name: '高清', src: 'http://yunxianchang.live.ujne7.com/vod-system-bj/103_369ed890f51-1c38-42a7-9ce2-828492660c60.mp4'},
+                {name: '超清', src: 'http://yunxianchang.live.ujne7.com/vod-system-bj/103_370cc2f40bd-a39f-472a-884f-f44fcd9c5ae0.mp4'},
+                {name: '原画', src: 'http://yunxianchang.live.ujne7.com/vod-system-bj/103_371ab0c0fda-143d-4755-8727-d3cd12dce02d.mp4'}
+              ]
+            },
+            screen: {
+              icon: {
+                small: 'https://s0.ssl.qhres.com/static/c4c89ac23b22b430.svg',
+                full: 'https://s1.ssl.qhres.com/static/0d1b13bbc2c05fdf.svg'
+              }
+            }
+          }
+        }, 'chimeeCenterState'],
+        controls: true,
+        autoplay: false
+      })
+    </script>
+  </body>
+</html>

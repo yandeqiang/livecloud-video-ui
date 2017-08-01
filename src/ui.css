@@ -1,0 +1,187 @@
+#wrapper{
+  width: 768px;
+  height: 432px;
+}
+container, video{
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #000;
+}
+container{
+  position: relative;
+}
+
+/* chimee-center-state */
+chimee-center-state{
+   position: absolute; 
+}
+
+/* 全部初始皆为隐藏状态 */
+chimee-center-state-error,
+chimee-center-state-correct,
+chimee-center-state-loading,
+chimee-center-state-tip{
+  display: none;
+}
+
+chimee-center-state.error chimee-center-state-error,
+chimee-center-state.correct chimee-center-state-correct,
+chimee-center-state.loading chimee-center-state-loading,
+chimee-center-state.tip chimee-center-state-tip{
+  display: inline-block;
+}
+chimee-center-state-correct{
+  width: 56px;
+  height: 56px;
+}
+
+chimee-center-state-tip{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 56px;
+  height: 56px;
+  border-radius: 28px;
+  background: rgba(0, 0, 0, .5);
+}
+
+chimee-center-state.play span{
+  background-image: url('./image/play.svg');
+}
+chimee-center-state.pause span{
+  background-image: url('./image/pause.svg');
+}
+
+chimee-center-state-tip span{
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin: 16px;
+  background-origin: content-box;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+chimee-center-state-loading{
+  width: 52px;
+  height: 52px;
+  background-image: url('./image/loading.gif');
+  background-origin: content-box;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+chimee-center-state-error{
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 180px;
+  font-size: 16px;
+  z-index: 9;
+  color: rgb(255, 207, 0);
+  text-shadow: 0 0 3px rgb(255, 0, 0);
+  font-weight: 100;
+}
+
+chimee-control-wrap{
+  background: linear-gradient(0deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+}
+
+.chimee-component{
+  height: 3.2em;
+}
+
+/*播放器状态， 播放／暂停*/
+chimee-control-state.chimee-component{
+  padding-left: 2.4em;
+  padding-right: 2.4em;
+}
+
+/*播放器控制条*/
+chimee-progressbar.chimee-component{
+  position: relative;
+  width: auto;
+}
+
+chimee-progressbar-ball{
+	content: '';
+	position: absolute;
+	right: -2em;
+	top: -1em;
+	display: inline-block;
+	width: 2em;
+	height: 2em;
+	border-radius: 1em;
+  background: #fff;
+  pointer-events: none;
+}
+
+/*时间显示*/
+chimee-progresstime.chimee-component{
+  height: 100%;
+  color: #fff;
+  font-weight: normal;
+  text-align: center;
+  white-space: nowrap;
+  padding: 0;
+  line-height: 2.75em;
+  vertical-align: bottom;
+  font-size: 16px;
+}
+
+chimee-progresstime-pass,
+chimee-progresstime-total{
+  display: inline;
+}
+
+/*音量控制*/
+
+chimee-volume.chimee-component{
+  line-height: 3.2em;
+  vertical-align: middle;
+}
+
+chimee-volume-state{
+  display: inline-block;
+  width: 2em;
+  height: 1.6em;
+  margin-right: 1em;
+}
+
+chimee-volume-bar{
+  margin-right: 1em;
+}
+
+chimee-volume-bar-all,
+chimee-volume-bar-bg{
+  top: 2em;
+}
+chimee-volume-bar-bg{
+  background: #D8D8D8;
+}
+chimee-volume-bar-all{
+	background: #57B0F6;
+}
+
+/*全屏*/
+chimee-screen.chimee-component{
+  padding-right: 2em;
+  padding-left: 2em;
+}
+
+/* 清晰度切换 */
+chimee-clarity.chimee-component{
+  height: 100%;
+  line-height: 2.75em;
+}
+
+chimee-clarity-list{
+  left: -2em;
+  width: 8em;
+  padding-bottom: 2em;
+}
